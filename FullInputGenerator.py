@@ -33,7 +33,7 @@ else:
     maxRange = int(input()) + 1
     print("Делитель")
     divider = int(input())
-    print("Сортировка (0 - нет, 1 - min_max, 2 - max_min")
+    print("Сортировка (0 - нет, 1 - min_max, 2 - max_min)")
     sort = int(input())
     print(niceLine)
     for _ in range(0, number):
