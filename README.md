@@ -1,3 +1,3 @@
 # egeCustomInputGenerator
 Input generator for tasks
-![ScreenShot](ScreenShot)
+![ScreenShot](https://github.com/TemaSysoev/egeCustomInputGenerator/blob/master/ScreenShot.png)
