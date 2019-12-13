@@ -67,3 +67,5 @@ else:
         print(niceLine)
 if errorMes:
     print("!: there are repeats in result. We tried to do our job, but maybe it is not your fucking day")
+else:
+    print("no repeats, that's cool btw")
