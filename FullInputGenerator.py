@@ -11,7 +11,7 @@ divider = 1
 minRange = 0
 maxRange = 100
 sort = 0
-
+errorMes = False
 if custom == 0:
     number = 5
     for _ in range(0, number):
@@ -49,6 +49,8 @@ else:
                         a = (a // divider) * divider
                         if a != item:
                             continue
+                if a == item:
+                    errorMes = True
             result.append(a)
         if sort == 1:
             result.sort()
@@ -58,3 +60,5 @@ else:
         for index in result:
             print(index)
         print(niceLine)
+if errorMes:
+    print("!: there are repeats in result. We tried to do our job, but maybe it is not your fucking day")
