@@ -7,10 +7,10 @@ niceLine = """
 number = 5
 print(niceLine)
 for _ in range(0, number):
-    length = random.randrange(4, 10, 1)
+    length = random.randint(4, 10)
 
     print(length)
     for _ in range(0, length):
-        a = random.randrange(0, 100, 1)
+        a = random.randint(0, 100)
         print(a)
     print(niceLine)

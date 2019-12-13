@@ -6,6 +6,8 @@ niceLine = """
 print("Кастомизировать? (0 - нет, any - да)")
 custom = int(input())
 length = 0
+minLength = 0
+maxLength = 1
 number = 0
 divider = 1
 minRange = 0
@@ -15,37 +17,40 @@ errorMes = False
 if custom == 0:
     number = 5
     for _ in range(0, number):
-        length = random.randrange(4, 10, 1)
+        length = random.randint(4, 10)
         print(niceLine)
         print(length)
         for _ in range(0, length):
-            a = random.randrange(0, 100, 1)
+            a = random.randint(0, 100)
             print(a)
     print(niceLine)
 else:
     print("Количество наборов:")
     number = int(input())
-    print("Длина:")
-    length = int(input())
+    print("Минимальная длина:")
+    minLength = int(input())
+    print("Максимальная длина:")
+    maxLength = int(input())
     print("Минимальное значение:")
     minRange = int(input())
     print("Максимальное значение:")
-    maxRange = int(input()) + 1
-    print("Делитель")
+    maxRange = int(input())
+    print("Делитель:")
     divider = int(input())
-    print("Сортировка (0 - нет, 1 - min_max, 2 - max_min)")
+    print("Сортировка (0 - нет, 1 - min_max, 2 - max_min):")
     sort = int(input())
     print(niceLine)
     for _ in range(0, number):
+        length = random.randint(minLength,maxLength)
         print(length)
         result = []
         for _ in range(0, length):
-            a = random.randrange(minRange, maxRange, 1)
+            a = random.randint(minRange, maxRange)
             a = (a // divider) * divider
             for item in result:
                 if a == item:
                     for _ in range(0, 10):
-                        a = random.randrange(minRange, maxRange, 1)
+                        a = random.randint(minRange, maxRange)
                         a = (a // divider) * divider
                         if a != item:
                             continue
