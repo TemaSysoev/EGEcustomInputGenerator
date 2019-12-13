@@ -1,10 +1,9 @@
-import math
-import random
+import math, random
 
 niceLine = """
 =============
 """
-print("Кастомизировать?")
+print("Кастомизировать? (0 - нет, any - да)")
 custom = int(input())
 length = 0
 number = 0
@@ -45,7 +44,7 @@ else:
             a = (a // divider) * divider
             for item in result:
                 if a == item:
-                    for _ in range(0, 5):
+                    for _ in range(0, 10):
                         a = random.randrange(minRange, maxRange, 1)
                         a = (a // divider) * divider
                         if a != item:
